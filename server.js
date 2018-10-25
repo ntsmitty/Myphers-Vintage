@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express(); 
-const PORT = 3000; 
+const PORT = 5000
+
+
+app.get('/testing', (req, res) => res.send('hello'))
 
 
 
 
 
-
-
-
-app.listen(PORT, () => console.log('listening on 3000')); 
+app.listen(PORT, () => console.log('listening on 5000')); 
