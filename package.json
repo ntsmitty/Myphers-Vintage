@@ -1,19 +1,25 @@
 {
-  "name": "myphersstore",
-  "version": "1.0.0",
-  "description": "Online vintage store",
-  "main": "index.js",
+  "name": "myphersvintage",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.0.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ntsmitty/Myphers-Vintage-.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "Nicholas Smit",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ntsmitty/Myphers-Vintage-/issues"
-  },
-  "homepage": "https://github.com/ntsmitty/Myphers-Vintage-#readme"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
