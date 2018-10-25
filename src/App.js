@@ -14,9 +14,13 @@ class App extends Component {
   }; 
 
   render() {
-    console.log(this.state.users)
+    console.log('hi', this.state.users)
    return (
-    <div>{this.state.users}</div>
+    <ul className="databro">
+     {this.state.users.map(users =>  
+       <li key={users.id}>{users.customer}</li>
+     )}
+    </ul>
     )
   }
 }

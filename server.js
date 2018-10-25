@@ -13,6 +13,7 @@ app.use( (req, res, next) => {
 
 app.get('/testing', (req, res) => {
   res.status(200);
+  res.set("Content-Type", "application/json")
   res.json([ 
     {id: 1, customer: "Dumb Data"},
     {id: 2, customer: "Stupid Data"},
