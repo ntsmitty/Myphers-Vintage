@@ -1,14 +1,7 @@
-* {
-  padding: 0; 
-  margin: 0; 
-}
+
 
 body {
- position: relative;
- width: 100%; 
- padding: 0; 
- margin: 0; 
- top: 350px;
+
 }
 
 img {
@@ -19,18 +12,20 @@ img {
 }
 
 button {
-  height: 100px;
+
 }
 
-.Content-Container {
-  position: relative;
-  top: 200px; 
-  margin: 0; 
-  padding: 0; 
-  display: flex
-  width 100%;   
+.content-container {
+  
 }
 
-.Product-Display {
-  margin: 25px 10px 25px 15px; 
+.product-display {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+.product-card {
+  margin: 10px; 
+
 }

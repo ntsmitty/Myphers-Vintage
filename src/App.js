@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import MainContainer from './MainContainer.jsx'
+import ContentContainer from './ContentContainer';
 
 class App extends Component {
 
@@ -8,7 +8,7 @@ class App extends Component {
 
   render() {
    return (
-     <MainContainer />
+     <ContentContainer />
     ) 
   }
 }

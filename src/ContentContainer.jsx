@@ -1,13 +1,43 @@
 import React from 'react'; 
-import ProductDisplay from './ProductDisplay.jsx'
+import { Component } from'react'
+import ProductsDisplay from './ProductsDisplay.jsx'
+const endpoint = 'https://dog.ceo/api/breeds/image/random/20 '
 
-const ContentContainer = (props) => {
-  console.log('ContentContainer', props.dogImages)
-    return( 
-      <ProductDisplay 
-        dogImages={props.dogImages} 
-      /> 
-   ); 
-}; 
+
+
+
+class ContentContainer extends Component {
+  
+  state = {
+    imageUrls: []
+  }
+
+  componentDidMount() {
+    return fetch(endpoint)
+      .then(response => response.json())
+      .then(jsonData => {
+         const imageData = jsonData.message
+         this.setState({ imageUrls: imageData })
+      })
+      .catch(error => console.log(error)) 
+  }; 
+
+  handleClick = index => {
+    //do something
+    alert(index);
+  };
+
+
+  render() {
+    return (
+      <div className="content-container">
+        <ProductsDisplay
+          imageUrls={this.state.imageUrls}
+          handleClick={this.handleClick}
+        />
+      </div>
+    );
+  }
+}
 
 export default ContentContainer; 
