@@ -5,7 +5,7 @@ const ProductCard = ({ imageUrl, index, handleClick }) => {
   return (
     <div className="product-card">
       <img alt="" src={imageUrl} />
-      <button onClick={() => handleClick(index)}>Add To Cart</button>
+      {/* <button onClick={() => handleClick(index)}>Add To Cart</button> */}
     </div>
   );
 };

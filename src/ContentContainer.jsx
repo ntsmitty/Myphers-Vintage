@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { Component } from'react'
 import ProductsDisplay from './ProductsDisplay.jsx'
-const endpoint = 'https://dog.ceo/api/breeds/image/random/20 '
+const endpoint = 'https://dog.ceo/api/breeds/image/random/8 '
 
 
 
@@ -23,7 +23,6 @@ class ContentContainer extends Component {
   }; 
 
   handleClick = index => {
-    //do something
     alert(index);
   };
 
