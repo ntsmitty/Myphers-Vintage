@@ -1,8 +1,9 @@
 import React from 'react'; 
 import { Component } from'react'
 import ProductsDisplay from '../components/ProductsDisplay.jsx'
-import Header from '../components/Header.jsx'
 const endpoint = 'https://dog.ceo/api/breeds/image/random/8 '
+
+export const ImagesContext = React.createContext({});
 
 class ContentContainer extends Component {
   state = {
@@ -16,26 +17,20 @@ class ContentContainer extends Component {
          const imageData = jsonData.message
          this.setState({ imageUrls: imageData })
       })
-      .catch(error => console.log(error)) 
+   .catch(error => console.log(error)) 
   }; 
 
-  handleClick = index => {
-    alert(index);
-  };
-
-
   render() {
-    return (
+    return(
      <>
-      <div className="content-container">
-        <ProductsDisplay
-          imageUrls={this.state.imageUrls}
-          handleClick={this.handleClick}
-        />
-      </div> 
+       <ImagesContext.Provider value={{ imageUrls: this.state.imageUrls }}> 
+          <div className="content-container">
+            <ProductsDisplay count={this.state.imageUrls.length} /> 
+          </div>
+       </ImagesContext.Provider>
      </>
     );
-  };
+  }; 
 };
 
 export default ContentContainer; 
