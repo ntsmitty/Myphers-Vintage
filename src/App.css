@@ -1,14 +1,18 @@
-
+* {
+  margin: 0; 
+  padding: 0;
+}
 html {
-  background-color: white; 
+  height: 100%;
+  margin-right: auto; 
+  margin-left: auto; 
+  width: 100%;
 }
 
 body {
   position: relative;
-  place-items: center; 
   width: 100%;
   height: 100%;
-  top: 600px;
 }
 
 img {
@@ -22,18 +26,43 @@ img {
   box-shadow: 40px 40px 40px rgba(110, 99, 99, 0.2);
 }
 
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0; 
+}
+
+.header p{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 190px;
+  margin-top: 80px; 
+  font-family: 'Courier New', Courier, monospace;
+  color: red; 
+}
+
+.header p:hover {  
+  font-size: 200px;
+  cursor: pointer;
+;}
+
 .content-container {
   position: relative;
-  top: 400px;
-  left: 200px;
+  margin-top: 0;
+  left: 50px;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 200px;
-  margin-top: 100px;
 }
 
 .product-display {
+  position: relative;
   display: flex; 
   flex-wrap: wrap;
   width: 50%;
@@ -41,8 +70,9 @@ img {
   margin-left: auto;
   margin-right: auto; 
   justify-content: space-between;
-  box-shadow: 0px 0px 60px  #676769ce;
+  box-shadow: 0px 0px 60px  #676769ce;  
   background-color: white;
+  bottom: 100px;
 }
 .product-card:hover {
   transform: rotateY(180deg)
@@ -72,9 +102,25 @@ img {
 }
 
 .card-back-content {
+  position: relative;
   transform: rotateY(180deg);
   backface-visibility: hidden; 
+  top: 70%;
+  width: 50%; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
+
+.addtocart-btn{
+  height: 200px; 
+  width: 90%; 
+}
+
+h1 {
+  width: 90%;
+}
+
+
 
 
 

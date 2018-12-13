@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { Component } from'react'
-import ProductsDisplay from './ProductsDisplay.jsx'
-import Header from './Header.jsx'
+import ProductsDisplay from '../components/ProductsDisplay.jsx'
+import Header from '../components/Header.jsx'
 const endpoint = 'https://dog.ceo/api/breeds/image/random/8 '
 
 class ContentContainer extends Component {
@@ -27,13 +27,12 @@ class ContentContainer extends Component {
   render() {
     return (
      <>
-      <Header />
       <div className="content-container">
         <ProductsDisplay
           imageUrls={this.state.imageUrls}
           handleClick={this.handleClick}
         />
-       </div> 
+      </div> 
      </>
     );
   };

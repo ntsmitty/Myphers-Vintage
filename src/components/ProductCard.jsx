@@ -11,7 +11,8 @@ const ProductCard = ({ imageUrl, index, handleClick }) => {
      </div> 
      <div className="card-back"> 
        <div className="card-back-content">
-         <p>HELLO</p>
+         <h1 className="price-info">Price: $1,000,000</h1>
+         <button className="addtocart-btn">Add To Cart</button>
        </div> 
      </div>
    </div>
