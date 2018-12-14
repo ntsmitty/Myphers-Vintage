@@ -2,6 +2,7 @@ import React from 'react';
 import  { ImagesContext } from '../containers/ContentContainer.jsx'
 
 
+
 const ProductCard = ({ imageUrls, index, handleClick }) => (
  <ImagesContext.Consumer> 
     {({ imageUrls }) => (      
